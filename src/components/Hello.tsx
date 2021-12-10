@@ -7,9 +7,9 @@ const Hello = () => {
       <Intro>
         <Title>Kiandra Ginevra</Title>
         <Paragraph>
-          is a software and web developer. She is currently working on building
-          web apps and her first video game, and teaching herself Redux and
-          Express. You can find her work on{' '}
+          is a front end web developer. She is currently working on building
+          web apps, hacking together her first video game, and teaching herself
+          Redux and Express. You can find her work on{' '}
           <Link
             href='https://github.com/crownedfoxes'
             target='_blank'

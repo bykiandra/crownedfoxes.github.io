@@ -6,12 +6,12 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1A202C;
+  background-color: #1a202c;
 `
 
 const Intro = styled.div`
-  max-width: 650px;
-  margin: 200px 30px;
+  max-width: 660px;
+  margin: 180px 30px 150px 30px;
 `
 
 const Title = styled.h1`
@@ -22,10 +22,20 @@ const Title = styled.h1`
   margin-top: 0;
   margin-bottom: 10px;
   letter-spacing: -1px;
-  background: #2CD8D5;
-  background: -moz-linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 50%, #FFBAC3 100%);
-  background: -webkit-linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 50%, #FFBAC3 100%);
-  background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 50%, #FFBAC3 100%);
+  background: #2cd8d5;
+  background: -moz-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 50%,
+    #ffbac3 100%
+  );
+  background: -webkit-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 50%,
+    #ffbac3 100%
+  );
+  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 50%, #ffbac3 100%);
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
@@ -35,28 +45,56 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled(Title)`
-  margin: 100px 0 50px 0;
+  margin: 140px 0 70px 0;
   text-align: center;
 `
 
+const ProjectTitle = styled.h3`
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  margin: 10px 0 5px 0;
+  padding: 0 10px;
+`
+
 const Paragraph = styled.p`
-  font-family: "Poppins", sans-serif;
   font-size: 17px;
   line-height: 1.6;
   letter-spacing: 0.2px;
   word-spacing: -0.1px;
 `
 
+const SmallParagraph = styled(Paragraph)`
+  font-family: Karla, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin-top: 10px;
+  padding: 0 10px;
+`
+
+const Center = styled(SmallParagraph)`
+  text-align: center;
+  margin-bottom: 20px;
+`
+
 const Link = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
-  border-bottom: 1px solid #C5C1FF;
-  transition: .3s;
+  border-bottom: 2px solid #c5c1ff;
   :hover {
-    background: #2CD8D5;
-    background: -moz-linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 30%, #FFBAC3 100%);
-    background: -webkit-linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 30%, #FFBAC3 100%);
-    background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 30%, #FFBAC3 100%);
+    background: #2cd8d5;
+    background: -moz-linear-gradient(
+      -225deg,
+      #2cd8d5 0%,
+      #c5c1ff 30%,
+      #ffbac3 100%
+    );
+    background: -webkit-linear-gradient(
+      -225deg,
+      #2cd8d5 0%,
+      #c5c1ff 30%,
+      #ffbac3 100%
+    );
+    background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
     color: transparent;
     -moz-background-clip: text;
     -webkit-background-clip: text;
@@ -64,8 +102,150 @@ const Link = styled.a`
     -ms-background-clip: text;
     background-clip: text;
     border-bottom: 0;
-    transition: .3s;
   }
 `
 
-export { Header, Intro, Title, Subtitle, Paragraph, Link }
+const ProjectLink = styled(Link)`
+  margin: 0 8px;
+`
+
+const Button = styled(Link)`
+  font-family: Karla, Helvetica, Arial, sans-serif;
+  border: none;
+  margin: 50px 0 30px 0;
+  padding: 10px 12px;
+  border-radius: 15px;
+  background: #1a202c;
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background: #2cd8d5;
+    background: -moz-linear-gradient(
+      -225deg,
+      #2cd8d5 0%,
+      #c5c1ff 30%,
+      #ffbac3 100%
+    );
+    background: -webkit-linear-gradient(
+      -225deg,
+      #2cd8d5 0%,
+      #c5c1ff 30%,
+      #ffbac3 100%
+    );
+    background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
+    color: #1a202c;
+  }
+`
+
+const ProjectCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+  margin-bottom: 100px;
+`
+
+const CardBorder = styled.div`
+  width: 304px;
+  padding: 2px;
+  border-radius: 15px;
+  background: #2cd8d5;
+  background: -moz-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 30%,
+    #ffbac3 100%
+  );
+  background: -webkit-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 30%,
+    #ffbac3 100%
+  );
+  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+`
+
+const CardInner = styled.div`
+  width: 300px;
+  background: #1a202c;
+  border-radius: 15px;
+  padding: 2px;
+`
+
+const Gradient = styled.div`
+  position: relative;
+  margin-top: 100px;
+  padding: 75px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2cd8d5;
+  background: -moz-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 40%,
+    #ffbac3 100%
+  );
+  background: -webkit-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 40%,
+    #ffbac3 100%
+  );
+  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 40%, #ffbac3 100%);
+  -moz-transform: skewY(-6deg);
+  -webkit-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+`
+
+const GradientInner = styled.div`
+  z-index: 1;
+`
+
+const Foot = styled.div`
+  background-color: #1a202c;
+  margin: -100px 0 -20px 0;
+  padding: 170px 50px 50px 0;
+  z-index: -1;
+  text-align: right;
+
+  @media (min-width: 1400px) {
+    padding-top: 100px;
+  }
+`
+
+export {
+  Header,
+  Intro,
+  Title,
+  Subtitle,
+  ProjectTitle,
+  Paragraph,
+  SmallParagraph,
+  Link,
+  ProjectLink,
+  Button,
+  ProjectCards,
+  CardBorder,
+  CardInner,
+  Center,
+  Gradient,
+  GradientInner,
+  Foot,
+}
