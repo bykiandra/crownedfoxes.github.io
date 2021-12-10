@@ -1,10 +1,12 @@
-import './App.css'
+import Hello from './components/Hello'
+import Projects from './components/Projects'
 
 const App = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>Learn React</header>
-    </div>
+    <>
+      <Hello />
+      <Projects />
+    </>
   )
 }
 
