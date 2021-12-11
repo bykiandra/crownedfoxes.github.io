@@ -1,5 +1,5 @@
 import { Header, Intro, Title, Paragraph, Link } from '../theme'
-import './Hello.css'
+import './svg.css'
 
 const Hello = () => {
   return (
@@ -29,6 +29,7 @@ const Hello = () => {
         </Paragraph>
       </Intro>
       <svg
+        className='top'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 100 100'
         preserveAspectRatio='none'

@@ -45,7 +45,7 @@ const Title = styled.h1`
 `
 
 const Subtitle = styled(Title)`
-  margin: 140px 0 70px 0;
+  margin: 170px 0 70px 0;
   text-align: center;
 `
 
@@ -180,54 +180,11 @@ const CardInner = styled.div`
   padding: 2px;
 `
 
-const Gradient = styled.div`
-  position: relative;
-  margin-top: 100px;
-  padding: 75px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #2cd8d5;
-  background: -moz-linear-gradient(
-    -225deg,
-    #2cd8d5 0%,
-    #c5c1ff 40%,
-    #ffbac3 100%
-  );
-  background: -webkit-linear-gradient(
-    -225deg,
-    #2cd8d5 0%,
-    #c5c1ff 40%,
-    #ffbac3 100%
-  );
-  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 40%, #ffbac3 100%);
-  -moz-transform: skewY(-6deg);
-  -webkit-transform: skewY(-6deg);
-  -o-transform: skewY(-6deg);
-  -ms-transform: skewY(-6deg);
-  transform: skewY(-6deg);
-`
-
-const GradientInner = styled.div`
-  z-index: 1;
-`
-
 const Foot = styled.div`
   background-color: #1a202c;
-  margin: -100px 0 -20px 0;
-  padding: 170px 50px 50px 0;
-  z-index: -1;
+  margin-top: 100px;
+  padding: 50px 50px 50px 0;
   text-align: right;
-
-  @media (min-width: 1400px) {
-    padding-top: 100px;
-  }
 `
 
 export {
@@ -245,7 +202,5 @@ export {
   CardBorder,
   CardInner,
   Center,
-  Gradient,
-  GradientInner,
-  Foot,
+  Foot
 }
