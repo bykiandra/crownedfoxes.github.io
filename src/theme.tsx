@@ -71,6 +71,10 @@ const SmallParagraph = styled(Paragraph)`
   padding: 0 10px;
 `
 
+const SmallParagraphRight = styled(SmallParagraph)`
+  text-align: right;
+`
+
 const Center = styled(SmallParagraph)`
   text-align: center;
   margin-bottom: 20px;
@@ -166,10 +170,12 @@ const CardBorder = styled.div`
   );
   background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  transition: margin .3s;
 
   &:hover {
     margin-top: -5px;
     margin-bottom: 5px;
+    transition: margin .3s;
   }
 `
 
@@ -183,8 +189,11 @@ const CardInner = styled.div`
 const Foot = styled.div`
   background-color: #1a202c;
   margin-top: 100px;
-  padding: 50px 50px 50px 0;
-  text-align: right;
+  padding: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `
 
 export {
@@ -195,6 +204,7 @@ export {
   ProjectTitle,
   Paragraph,
   SmallParagraph,
+  SmallParagraphRight,
   Link,
   ProjectLink,
   Button,
