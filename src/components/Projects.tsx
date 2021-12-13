@@ -8,10 +8,10 @@ const Projects = () => {
       <Subtitle>Featured Projects</Subtitle>
       <ProjectCards>
         <Card
-          title='pokedex'
-          description='A Pokédex web app built using React, Tailwind CSS, and Axios.'
-          demo='https://cf-pokedex.netlify.app/'
-          code='https://github.com/crownedfoxes/pokedex'
+          title='random-colour-generator'
+          description='Generates random colours with the hex, rgb, hsl, hsv, and cmyk values.'
+          demo='https://cf-randomcolourgenerator.netlify.app/'
+          code='https://github.com/crownedfoxes/random-colour-generator'
         />
         <Card
           title='to-do-redux'
@@ -20,10 +20,10 @@ const Projects = () => {
           code='https://github.com/crownedfoxes/to-do-redux'
         />
         <Card
-          title='random-colour-generator'
-          description='Generates random colours with the hex, rgb, hsl, hsv, and cmyk values.'
-          demo='https://cf-randomcolourgenerator.netlify.app/'
-          code='https://github.com/crownedfoxes/random-colour-generator'
+          title='pokedex'
+          description='A Pokédex web app built using React, Tailwind CSS, and Axios.'
+          demo='https://cf-pokedex.netlify.app/'
+          code='https://github.com/crownedfoxes/pokedex'
         />
       </ProjectCards>
       <Center>

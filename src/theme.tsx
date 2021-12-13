@@ -10,7 +10,7 @@ const Header = styled.div`
 `
 
 const Intro = styled.div`
-  max-width: 660px;
+  max-width: 670px;
   margin: 180px 30px 150px 30px;
 `
 
@@ -47,12 +47,18 @@ const Title = styled.h1`
 const Subtitle = styled(Title)`
   margin: 170px 0 70px 0;
   text-align: center;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 `
 
 const ProjectTitle = styled.h3`
   font-family: 'Work Sans', Arial, Helvetica, sans-serif;
   margin: 10px 0 5px 0;
   padding: 0 10px;
+`
+
+const InfoTitle = styled(Title)`
+  color: #1a202c;
+  text-align: center;
 `
 
 const Paragraph = styled.p`
@@ -71,7 +77,11 @@ const SmallParagraph = styled(Paragraph)`
   padding: 0 10px;
 `
 
-const SmallParagraphRight = styled(SmallParagraph)`
+const FootParagraph = styled(SmallParagraph)`
+  min-width: 40%;
+`
+
+const FootParagraphRight = styled(FootParagraph)`
   text-align: right;
 `
 
@@ -170,12 +180,12 @@ const CardBorder = styled.div`
   );
   background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  transition: margin .3s;
+  transition: margin 0.3s;
 
   &:hover {
     margin-top: -5px;
     margin-bottom: 5px;
-    transition: margin .3s;
+    transition: margin 0.3s;
   }
 `
 
@@ -186,9 +196,37 @@ const CardInner = styled.div`
   padding: 2px;
 `
 
+const InfoSection = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  background: #2cd8d5;
+  background: -moz-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 30%,
+    #ffbac3 100%
+  );
+  background: -webkit-linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #c5c1ff 30%,
+    #ffbac3 100%
+  );
+  background: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 30%, #ffbac3 100%);
+`
+
+const InfoInner = styled.div`
+  max-width: 660px;
+  margin: 50px 30px;
+  color: #1a202c;
+`
+
 const Foot = styled.div`
   background-color: #1a202c;
-  margin-top: 100px;
   padding: 50px;
   display: flex;
   flex-direction: row-reverse;
@@ -202,9 +240,11 @@ export {
   Title,
   Subtitle,
   ProjectTitle,
+  InfoTitle,
   Paragraph,
   SmallParagraph,
-  SmallParagraphRight,
+  FootParagraph,
+  FootParagraphRight,
   Link,
   ProjectLink,
   Button,
@@ -212,5 +252,7 @@ export {
   CardBorder,
   CardInner,
   Center,
-  Foot
+  InfoSection,
+  InfoInner,
+  Foot,
 }

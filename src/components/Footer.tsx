@@ -1,57 +1,67 @@
-import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useState, useEffect } from 'react'
 
-import { Foot, SmallParagraph, SmallParagraphRight, Link } from '../theme'
+import { Foot, FootParagraph, FootParagraphRight, Link } from '../theme'
 import './svg.css'
 
 type Music = {
   currentlyPlaying?: boolean
   song?: string
   artist?: string
+  album?: string
+  image?: string
   error: boolean
 }
 
 const Footer = () => {
   const [music, setMusic] = useState<Music>({ error: true })
   const apiKey = process.env.REACT_APP_MUSIC_API_KEY
+  const apiUrl =
+    'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=crownedfoxes&api_key=' +
+    apiKey +
+    '&format=json&limit=1'
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const getMusic = () => {
       axios
-        .get(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=crownedfoxes&api_key=${apiKey}&format=json&limit=1`
-        )
-        .then(
-          (data: any) => {
-            const latest = data.data.recenttracks.track[0]
-            let currentlyPlaying = false
-            if (Object.keys(latest).includes('@attr')) {
-              currentlyPlaying = latest['@attr'].nowplaying
-            } else {
-              currentlyPlaying = false
-            }
-  
-            setMusic({
-              currentlyPlaying: currentlyPlaying,
-              song: latest.name,
-              artist: latest.artist['#text'],
-              error: false,
-            })
-          },
-          (err: string) => {
-            console.log(err)
-            setMusic({ error: true })
+        .get(apiUrl)
+        .then((data: any) => {
+          const latest = data.data.recenttracks.track[0]
+          let currentlyPlaying = false
+          if (Object.keys(latest).includes('@attr')) {
+            currentlyPlaying = latest['@attr'].nowplaying
+          } else {
+            currentlyPlaying = false
           }
-        )
-    }, 300000) // 5 minutes
+
+          setMusic({
+            currentlyPlaying: currentlyPlaying,
+            song: latest.name,
+            artist: latest.artist['#text'],
+            album: latest.album['#text'],
+            image: latest.image[0]['#text'],
+            error: false,
+          })
+        })
+        .catch((err) => {
+          console.log(err)
+          setMusic({ error: true })
+        })
+    }
+
+    getMusic()
+
+    const interval = setInterval(() => {
+      getMusic()
+    }, 60000) // 1 minute
 
     return () => clearInterval(interval)
-  }, [apiKey])
+  }, [apiUrl])
 
   return (
     <>
       <Foot>
-        <SmallParagraphRight>
+        <FootParagraphRight>
           Built with{' '}
           <Link href='https://reactjs.org/' target='_blank' rel='noreferrer'>
             React
@@ -75,15 +85,30 @@ const Footer = () => {
           </Link>
           <br />
           &copy; 2021 Kiandra Ginevra
-        </SmallParagraphRight>
+        </FootParagraphRight>
 
         {!music.error ? (
-          <SmallParagraph>
-          {music.currentlyPlaying ? 'Currently Playing' : 'Last Listen'}<br />
-          Song: {music.song}<br />
-          Artist: {music.artist}
-        </SmallParagraph>
-        ) : <></>}
+          <FootParagraph>
+            <Link
+              href='https://www.last.fm/user/crownedfoxes'
+              target='_blank'
+              rel='noreferrer'
+            >
+              {music.currentlyPlaying ? 'Currently Playing' : 'Last Listen'}
+            </Link>
+            <br />
+            <img
+              src={music.image}
+              alt={music.album}
+              style={{ float: 'left', margin: '5px 8px 0 0' }}
+            />
+            Song: {music.song}
+            <br />
+            Artist: {music.artist}
+          </FootParagraph>
+        ) : (
+          <></>
+        )}
       </Foot>
     </>
   )
