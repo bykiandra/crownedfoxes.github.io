@@ -94,7 +94,7 @@ const Footer = () => {
               target='_blank'
               rel='noreferrer'
             >
-              {music.currentlyPlaying ? 'Currently Playing' : 'Last Listen'}
+              {music.currentlyPlaying ? 'Currently Playing' : 'Last Played'}
             </Link>
             <br />
             <img
