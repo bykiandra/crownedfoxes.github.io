@@ -84,7 +84,7 @@ const Footer = () => {
             GitHub
           </Link>
           <br />
-          &copy; 2021 Kiandra Ginevra
+          &copy; 2021–{new Date().getFullYear()} Kiandra Ginevra
         </FootParagraphRight>
 
         {!music.error ? (
