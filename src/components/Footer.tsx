@@ -15,7 +15,7 @@ type Music = {
 
 const Footer = () => {
   const [music, setMusic] = useState<Music>({ error: true })
-  const apiKey = process.env.REACT_APP_MUSIC_API_KEY
+  const apiKey = process.env.MUSIC_API_KEY
   const apiUrl =
     'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=crownedfoxes&api_key=' +
     apiKey +
