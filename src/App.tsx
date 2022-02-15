@@ -1,15 +1,15 @@
-import Hello from './components/Hello'
-import Projects from './components/Projects'
-import Info from './components/Info'
-import Footer from './components/Footer'
+import Heading from './components/Heading'
+// import Menu from './components/Menu'
+import Projects from './components/Projects/Projects'
+import About from './components/About/About'
 
 const App = () => {
   return (
     <>
-      <Hello />
+      <Heading />
+      {/* <Menu /> */}
       <Projects />
-      <Info />
-      <Footer />
+      <About />
     </>
   )
 }
