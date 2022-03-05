@@ -1,15 +1,15 @@
 import Heading from './components/Heading'
-// import Menu from './components/Menu'
-import Projects from './components/Projects/Projects'
-import About from './components/About/About'
+import Projects from './components/Projects'
+import About from './components/About'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
     <>
       <Heading />
-      {/* <Menu /> */}
       <Projects />
       <About />
+      <Footer />
     </>
   )
 }
