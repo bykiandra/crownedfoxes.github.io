@@ -1,14 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:wght@400;500&family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@font-face {
+  font-family: Bright;
+  src: url('assets/fonts/Bright.otf');
+  font-style: display;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Billion Dreams';
+  src: url('assets/fonts/BillionDreams.ttf');
+  font-style: sans-serif;
+  font-display: fallback;
+}
 
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Karla', Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./background.png');
-  background-size: 250px;
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-color: #161920;
-  color: #ffffff;
+  background-color: #FFFFFF;
+  color: #3D3D3D;
 }
