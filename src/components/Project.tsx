@@ -19,8 +19,8 @@ const Project = ({ title, description, demo, code }: Props) => {
     <SubHeader>
       <SubTitle>{title}</SubTitle>
       <div>
-        <ProjectLink href={demo} target='_blank' rel='noreferrer' title='Demo'><FiMonitor /></ProjectLink>
-        <ProjectLink href={code} target='_blank' rel='noreferrer' title='Code'><FiGithub /></ProjectLink>
+        <ProjectLink href={demo} target='_blank' rel='noreferrer' title='Demo'><FiMonitor size='23px' /></ProjectLink>
+        <ProjectLink href={code} target='_blank' rel='noreferrer' title='Code'><FiGithub size='23px' /></ProjectLink>
       </div>
     </SubHeader>
       <SubText>{description}</SubText>

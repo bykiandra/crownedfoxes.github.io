@@ -169,7 +169,7 @@ const SectionTitle = styled.h3`
 
 const SectionContent = styled.div`
   flex-grow: 4;
-  padding-top: 5px;
+  padding-top: 15px;
 
   @media (max-width: 800px) {
     padding-right: 30px;
@@ -198,7 +198,6 @@ const SubTitle = styled.h4`
 `
 
 const ProjectLink = styled.a`
-  font-size: 20px;
   padding-left: 10px;
   transition: color .25s;
 
