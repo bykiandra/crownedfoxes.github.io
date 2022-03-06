@@ -218,9 +218,21 @@ const ProjectLink = styled.a`
 
 const SubText = styled.p`
   font-size: 16px;
+  line-height: 22px;
   text-align: left;
   margin: 0;
-  padding: 0 10px 20px 10px;
+  padding: 0 10px 30px 10px;
+`
+
+const Icons = styled.p`
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 5px 10px 15px 10px;
+
+  > * {
+    margin: 0 10px 10px 10px;
+  }
 `
 
 const Foot = styled.div`
@@ -289,6 +301,7 @@ export {
   SubTitle,
   ProjectLink,
   SubText,
+  Icons,
   Foot,
   FootLink,
   BottomFooter,
