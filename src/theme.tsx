@@ -232,6 +232,12 @@ const Icons = styled.p`
   > * {
     margin: 0 10px 10px 10px;
   }
+
+  @media (max-width: 450px) {
+    > * {
+      margin: 0 5px 10px 5px;
+    }
+  }
 `
 
 const Foot = styled.div`
