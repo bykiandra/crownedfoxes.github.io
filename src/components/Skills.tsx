@@ -15,7 +15,6 @@ import {
   SiCsharp,
   SiVisualstudiocode,
   SiVisualstudio,
-  SiFigma,
   SiGithub,
   SiMariadb,
   SiNetlify,
@@ -69,7 +68,6 @@ const Skills = () => {
             <SiVercel title='Vercel' color='#000000' />
             <SiVisualstudiocode title='Visual Studio Code' color='#007ACC' />
             <SiVisualstudio title='Visual Studio' color='#5C2D91' />
-            <SiFigma title='Figma' color='#F24E1E' />
           </Icons>
         </SubText>
       </SectionContent>
