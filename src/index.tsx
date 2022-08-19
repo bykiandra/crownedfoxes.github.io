@@ -1,12 +1,20 @@
 import ReactDOM from 'react-dom'
 import { BrowserRouter } from "react-router-dom"
+import { MantineProvider } from '@mantine/core';
+
+import App from './App'
 
 import './index.css'
-import App from './App'
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <MantineProvider theme = {{
+      fontFamily: 'Open Sans',
+      fontFamilyMonospace: 'Monaco, Courier, monospace',
+      headings: { fontFamily: 'Open Sans' }
+    }}>
+      <App />
+    </MantineProvider>
   </BrowserRouter>,
   document.getElementById('root')
 )
