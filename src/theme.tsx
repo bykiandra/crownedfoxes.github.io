@@ -20,296 +20,185 @@ const gradientBackground = `
   background: linear-gradient(135deg, ${teal} 0%, ${purple} 50%, ${pink} 100%);
 `
 
-const gradientAnimation = `
-  background-size: 600% 600%;
-  -webkit-animation: GradientAnimation 5s ease infinite;
-  -moz-animation: GradientAnimation 5s ease infinite;
-  animation: GradientAnimation 5s ease infinite;
+// const gradientAnimation = `
+//   background-size: 600% 600%;
+//   -webkit-animation: GradientAnimation 5s ease infinite;
+//   -moz-animation: GradientAnimation 5s ease infinite;
+//   animation: GradientAnimation 5s ease infinite;
 
-  @-webkit-keyframes GradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  @-moz-keyframes GradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  @keyframes GradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-`
+//   @-webkit-keyframes GradientAnimation {
+//     0% { background-position: 0% 50%; }
+//     50% { background-position: 100% 50%; }
+//     100% { background-position: 0% 50%; }
+//   }
+//   @-moz-keyframes GradientAnimation {
+//     0% { background-position: 0% 50%; }
+//     50% { background-position: 100% 50%; }
+//     100% { background-position: 0% 50%; }
+//   }
+//   @keyframes GradientAnimation {
+//     0% { background-position: 0% 50%; }
+//     50% { background-position: 100% 50%; }
+//     100% { background-position: 0% 50%; }
+//   }
+// `
 
-const Header = styled.header`
-  ${gradientBackground}
-  ${gradientAnimation}
-
-  position: relative;
-  width: 100%;
-  // height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 0 40px 0 0 #fff, inset 0 -40px 0 0 #fff;
-`
-
-const Title = styled.h1`
-  font-family: Bright;
-  font-size: 200px;
-  font-weight: 200;
-  line-height: 120px;
-  color: transparent;
-  -webkit-text-stroke: 1px #fff;
-  text-align: center;
-  position: relative;
-
-  @media (min-width: 1681px) {
-    font-size: 300px;
-    line-height: 190px;
-  }
-
-  @media (max-width: 800px) {
-    font-size: 180px;
-    line-height: 110px;
-  }
-
-  @media (max-width: 700px) {
-    font-size: 150px;
-    line-height: 100px;
-  }
-
-  @media (max-width: 600px) {
-    font-size: 120px;
-    line-height: 80px;
-  }
-
-  @media (max-width: 450px) {
-    font-size: 90px;
-    line-height: 60px;
-  }
-`
-
-const Name = styled.span`
-  font-family: 'Billion Dreams';
-  font-size: 84px;
-  font-weight: 200;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+const Flex = styled.div`
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+`
+
+const Page = styled.div`
+  max-width: 800px;
+  margin: 100px auto 50px auto;
+
+  @media (max-width: 860px) {
+    max-width: 80%;
+    padding: 0 30px;
+  }
+
+  @media (max-width: 760px) {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+`
+
+const TopGradient = styled.div`
+  ${gradientBackground}
+  width: 100%;
+  height: 10px;
+`
+
+const MainName = styled.h1`
+  margin: 0;
+  font-size: 44px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+
+  & span {
+    ${gradientBackground}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 56px;
+    letter-spacing: 20px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 72px;
+    letter-spacing: 20px;
+  }
 
   @media (min-width: 1681px) {
-    font-size: 136px;
-    top: 80px;
+    font-size: 96px;
+    letter-spacing: 20px;
   }
+`
 
-  @media (max-width: 800px) {
-    top: 45px;
-  }
+const MiniMainName = styled.h1`
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  position: relative;
+  top: 25px;
+  left: 30px;
 
-  @media (max-width: 700px) {
-    font-size: 78px;
-  }
-
-  @media (max-width: 600px) {
-    font-size: 64px;
-    top: 35px;
+  & span {
+    ${gradientBackground}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 450px) {
-    font-size: 56px;
-    top: 25px;
+    font-size: 20px;
+    width: 100px;
   }
 `
 
-const Section = styled.div`
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+const MainSubTitle = styled.h3`
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  color: #949494;
 
-  @media (max-width: 600px) {
-    flex-wrap: wrap;
+  @media (min-width: 1000px) {
+    font-size: 20px;
+    letter-spacing: 12px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 24px;
+    letter-spacing: 12px;
+  }
+
+  @media (min-width: 1681px) {
+    font-size: 36px;
+    letter-spacing: 20px;
   }
 `
 
-const SectionHeading = styled.div`
-  min-width: 170px;
+const NavPos = styled.div`
+  position: absolute;
+  top: 35px;
+  right: 30px;
 `
 
-const SectionTitle = styled.h3`
-  ${gradientBackground}
-
-  font-family: Bright;
-  font-size: 48px;
-  font-weight: 200;
-  margin-top: 5px;
-  margin-bottom: 0;
-  text-align: right;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  -o-background-clip: text;
-  -ms-background-clip: text;
-  background-clip: text;
-
-  @media (max-width: 600px) {
-    text-align: center;
-  }
-`
-
-const SectionContent = styled.div`
-  flex-grow: 4;
-  padding-top: 15px;
-
-  @media (max-width: 800px) {
-    padding-right: 30px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 5px 10px 0 10px;
-  }
-`
-
-const SubHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-`
-
-const SubTitle = styled.h4`
-  font-family: Karla;
-  font-size: 17px;
-  font-weight: 600;
-  color: #555;
-  line-height: 18px;
-  margin: 0 0 5px 0;
-  border-bottom: 3px solid ${teal};
-`
-
-const ProjectLink = styled.a`
-  padding-left: 10px;
-  transition: color .25s;
-
-  :nth-child(1) {
-    color: ${purple};
-  }
-
-  :nth-child(2) {
-    color: ${pink};
-  }
-
-  :hover {
-    color: #bcbcbc;
-    transition: color .25s;
-  }
-`
-
-const SubText = styled.p`
-  font-size: 16px;
-  line-height: 22px;
-  text-align: left;
+const PageTitle = styled.h2`
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
   margin: 0;
-  padding: 0 10px 30px 10px;
 `
 
-const Icons = styled.p`
+const PageTitleBar = styled.div`
+  ${gradientBackground}
+  width: 50px;
+  height: 5px;
+  margin: 5px 0 10px 0;
+`
+
+const Icons = styled.div`
   font-size: 40px;
   text-align: center;
   margin: 0;
-  padding: 5px 10px 15px 10px;
+  padding: 5px 10px 0 10px;
 
   > * {
-    margin: 0 10px 10px 10px;
+    margin: 0 10px;
   }
 
   @media (max-width: 450px) {
     > * {
-      margin: 0 5px 10px 5px;
+      margin: 0 5px;
     }
   }
 `
 
-const Foot = styled.div`
-  ${gradientBackground}
-  ${gradientAnimation}
-
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
-  padding: 50px 0 0 0;
-  box-shadow: inset 0 -40px 0 0 #fff;
-
-  @media (max-width: 450px) {
-    padding-bottom: 5px;
-    box-shadow: inset 0 -70px 0 0 #fff;
-  }
-`
-
-const FootLink = styled.a`
-  font-size: 56px;
-  margin: 20px;
-  color: #fff;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
-
-  :hover {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
-  }
-
-  @media (max-width: 500px) {
-    font-size: 36px;
-  }
-`
-
-const BottomFooter = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  color: #888;
-  margin: 50px 20px 5px 20px;
-
-  @media (max-width: 450px) {
-    flex-direction: column;
-  }
-`
-
-const MusicFoot = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-`
-
-const Logo = styled.span`
-  font-size: 21px;
-  margin-right: 10px;
-`
-
 export {
-  Header,
-  Title,
-  Name,
-  Section,
-  SectionHeading,
-  SectionTitle,
-  SectionContent,
-  SubHeader,
-  SubTitle,
-  ProjectLink,
-  SubText,
-  Icons,
-  Foot,
-  FootLink,
-  BottomFooter,
-  MusicFoot,
-  Logo
+  Flex,
+  Page,
+  TopGradient,
+  MainName,
+  MiniMainName,
+  MainSubTitle,
+  NavPos,
+  PageTitle,
+  PageTitleBar,
+  Icons
 }
