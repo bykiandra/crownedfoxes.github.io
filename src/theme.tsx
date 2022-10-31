@@ -116,6 +116,7 @@ const MiniMainName = styled.h1`
   position: relative;
   top: 25px;
   left: 30px;
+  width: fit-content;
 
   & span {
     ${gradientBackground}
