@@ -154,6 +154,17 @@ const MainSubTitle = styled.h3`
   }
 `
 
+const UCTitle = styled(MainName)`
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 10px;
+
+  @media (max-width: 470px) {
+    font-size: 36px;
+    letter-spacing: 5px;
+  }
+`
+
 const NavPos = styled.div`
   position: absolute;
   top: 35px;
@@ -198,6 +209,7 @@ export {
   MainName,
   MiniMainName,
   MainSubTitle,
+  UCTitle,
   NavPos,
   PageTitle,
   PageTitleBar,

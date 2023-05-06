@@ -8,6 +8,7 @@ import { TopGradient } from './theme'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
+import UnderConstruction from './pages/UnderConstruction'
 
 const App = () => {
   const location = useLocation().pathname
@@ -15,12 +16,13 @@ const App = () => {
   return (
     <>
       <TopGradient />
-      {(location !== '/') ? <MiniTitleName /> : <></>}
-      <Navigation />
+      {/* {(location !== '/') ? <MiniTitleName /> : <></>}
+      <Navigation /> */}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/projects' element={<Projects />} />
+        <Route path='/' element={<UnderConstruction />} />
       </Routes>
     </>
   )

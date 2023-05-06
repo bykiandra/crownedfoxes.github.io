@@ -11,7 +11,7 @@ import {
   SiPhp,
   SiMysql,
   SiPython,
-  SiJava,
+  // SiJava,
   SiCsharp,
   SiVisualstudiocode,
   SiVisualstudio,
@@ -48,7 +48,7 @@ const Skills = () => {
         <SiMysql title='MySQL' color='#4479A1' />
         <SiMariadb title='MariaDB' color='#003545' />
         <SiPython title='Python' color='#3776AB' />
-        <SiJava title='Java' color='#007396' />
+        {/* <SiJava title='Java' color='#007396' /> */}
         <SiCsharp title='C#' color='#239120' />
       </Icons>
       <Icons>
