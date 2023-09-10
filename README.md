@@ -1,3 +1,3 @@
-# kiandraginevra.dev
+# Kiandra Codes
 
-My personal website.
+Built using React, TypeScript, Vite & Tailwind CSS.
