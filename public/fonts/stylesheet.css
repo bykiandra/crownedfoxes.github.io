@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Kangmas';
+    src: local('Kangmas DEMO Regular'), local('KangmasDEMO-Regular'),
+        url('KangmasDEMO-Regular.woff2') format('woff2'),
+        url('KangmasDEMO-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

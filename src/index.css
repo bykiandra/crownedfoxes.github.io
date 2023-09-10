@@ -1,9 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('/fonts/stylesheet.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+html {
+  --blue: #0B1957;
+  --pink: #FA9EBC;
+  --light-pink: #FFDBD1;
+  --off-white: #F8F3EA;
+
+  font-family: 'Inter', ui-sans-serif, sans-serif;
+
+  @apply antialiased w-auto h-auto;
+}
+body {
+  @apply border-blue border-[10px] xs:border-[15px] bg-off-white text-blue bg-right-top bg-no-repeat bg-contain xs:bg-auto py-8 px-4;
+  background-image: url('/grain-corner.png');
+  overflow-x: hidden;
+}
+
+.drop-shadow {
+  filter: drop-shadow(4px 4px 0px var(--blue));
+}
+
+.drop-shadow-light {
+  filter: drop-shadow(4px 4px 0px var(--light-pink));
+}
+
+.border-shadow {
+  @apply border-blue border-[3px] drop-shadow;
+}
+
+.star {
+  @apply fill-pink stroke-blue stroke-[3px];
+  filter: drop-shadow(4px 4px 0px var(--blue));
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: var(--pink);
+}
+
+nav a {
+  @apply px-2 py-1.5;
+}
+
+nav a:hover {
+  @apply bg-blue text-pink-light;
+}
+
+.project-link {
+  @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover:bg-blue hover:text-pink-light;
 }
