@@ -1,5 +1,5 @@
-import MAJ from '/public/projects/matj.png'
-import Pokedex from '/public/projects/pokedex.png'
+import MAJ from '/projects/matj.png'
+import Pokedex from '/projects/pokedex.png'
 import PinkTitle from './PinkTitle'
 
 const Selection = () => {

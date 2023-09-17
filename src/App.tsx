@@ -1,15 +1,20 @@
+import { Routes, Route } from 'react-router-dom'
+
 import Header from './components/Header'
-import Hero from './components/Hero'
-import Selection from './components/Selection'
-import Toolkit from './components/Toolkit'
+import Footer from './components/Footer'
+
+import Home from './pages/Home'
+import Projects from './pages/Projects'
 
 const App = () => {
   return (
     <div className='sm:max-w-[600px] sm:mx-auto lg:max-w-[900px]'>
       <Header />
-      <Hero />
-      <Selection />
-      <Toolkit />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/projects' element={<Projects />} />
+      </Routes>
+      <Footer />
     </div>
   )
 }

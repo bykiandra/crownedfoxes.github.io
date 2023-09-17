@@ -1,12 +1,14 @@
-import Star from '/public/star.svg'
+import { NavLink } from 'react-router-dom'
+
+import Star from '/star.svg'
 import Menu from './Navigation'
 
 const Header = () => {
   return (
-    <header className='flex justify-between content-center h-[47px]'>
-      <a href=''>
+    <header className='flex justify-between content-center h-[47px] mb-20'>
+      <NavLink to='/'>
         <img src={Star} width='48px' height='47px' alt='Kiandra Codes' />
-      </a>
+      </NavLink>
       <Menu />
     </header>
   )

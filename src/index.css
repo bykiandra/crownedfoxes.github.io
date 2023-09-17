@@ -5,12 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+:root {
   --blue: #0B1957;
   --pink: #FA9EBC;
   --light-pink: #FFDBD1;
   --off-white: #F8F3EA;
+}
 
+html {
   font-family: 'Inter', ui-sans-serif, sans-serif;
 
   @apply antialiased w-auto h-auto;
@@ -27,6 +29,14 @@ body {
 
 .drop-shadow-light {
   filter: drop-shadow(4px 4px 0px var(--light-pink));
+}
+
+.text-shadow-pink {
+  filter: drop-shadow(1px 1px 0px var(--pink));
+}
+
+.text-shadow-light {
+  filter: drop-shadow(1px 1px 0px var(--light-pink));
 }
 
 .border-shadow {
@@ -54,4 +64,12 @@ nav a:hover {
 
 .project-link {
   @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover:bg-blue hover:text-pink-light;
+}
+
+.link {
+  @apply font-semibold tracking-wide text-shadow-pink;
+}
+
+.link:hover {
+  @apply text-pink text-shadow-light;
 }

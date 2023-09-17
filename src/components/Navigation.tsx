@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import { Menu, Transition } from '@headlessui/react'
 
 const Navigation = () => {
@@ -20,24 +21,24 @@ const Navigation = () => {
           <Menu.Items className='absolute right-0 mt-2 w-24 origin-top-right bg-blue text-pink-light text-sm z-40'>
             <div className='flex flex-col px-1 py-1'>
               <Menu.Item>
-                <a href='/projects' className='px-2 py-2'>
+                <NavLink to='/projects' className='px-2 py-2'>
                   Projects
-                </a>
+                </NavLink>
               </Menu.Item>
               <Menu.Item>
-                <a href='' className='px-2 py-2'>
+                <NavLink to='' className='px-2 py-2'>
                   Articles
-                </a>
+                </NavLink>
               </Menu.Item>
               <Menu.Item>
-                <a href='' className='px-2 py-2'>
+                <NavLink to='' className='px-2 py-2'>
                   About
-                </a>
+                </NavLink>
               </Menu.Item>
               <Menu.Item>
-                <a href='' className='px-2 py-2'>
+                <NavLink to='' className='px-2 py-2'>
                   Contact
-                </a>
+                </NavLink>
               </Menu.Item>
             </div>
           </Menu.Items>
@@ -45,10 +46,10 @@ const Navigation = () => {
       </Menu>
 
       <nav className='self-center font-bold text-sm z-40 justify-between gap-12 hidden md:flex'>
-        <a href='/projects'>Projects</a>
-        <a href=''>Articles</a>
-        <a href=''>About</a>
-        <a href=''>Contact</a>
+        <NavLink to='/projects'>Projects</NavLink>
+        <NavLink to=''>Articles</NavLink>
+        <NavLink to=''>About</NavLink>
+        <NavLink to=''>Contact</NavLink>
       </nav>
     </>
   )
