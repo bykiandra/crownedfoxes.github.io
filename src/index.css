@@ -54,22 +54,22 @@ body {
   -webkit-text-stroke-color: var(--pink);
 }
 
-nav a {
-  @apply px-2 py-1.5;
+.hover-transition {
+  @apply transition duration-300;
 }
 
-nav a:hover {
-  @apply bg-blue text-pink-light;
+nav a {
+  @apply px-2 py-1.5 hover-transition hover:bg-blue hover:text-pink-light;
 }
 
 .project-link {
-  @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover:bg-blue hover:text-pink-light;
+  @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover-transition hover:bg-blue hover:text-pink-light;
 }
 
 .link {
-  @apply font-semibold tracking-wide text-shadow-pink;
+  @apply font-semibold tracking-wide text-shadow-pink hover-transition hover:text-pink;
 }
 
 .link:hover {
-  @apply text-pink text-shadow-light;
+  @apply text-shadow-light;
 }

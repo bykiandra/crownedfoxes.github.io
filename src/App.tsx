@@ -11,8 +11,8 @@ const App = () => {
     <div className='sm:max-w-[600px] sm:mx-auto lg:max-w-[900px]'>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<Projects />} />
+        <Route path='/' element={<Home isShowing={true} />} />
+        <Route path='/projects' element={<Projects isShowing={true} />} />
       </Routes>
       <Footer />
     </div>
