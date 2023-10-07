@@ -40,7 +40,7 @@ body {
 }
 
 .border-shadow {
-  @apply border-blue border-[3px] drop-shadow;
+  @apply border-blue border-[3px] drop-shadow hover:drop-shadow-none transition duration-300;
 }
 
 .star {

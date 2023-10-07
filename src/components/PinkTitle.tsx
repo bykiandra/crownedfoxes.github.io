@@ -8,12 +8,11 @@ const PinkTitle = ({ title, large = false}: Props) => {
   const small = <span className='absolute top-[0px] left-[1px] text-pink-light -z-50'>{title}</span>
 
   return (
-    <span className='relative'>
+    <span className='relative pr-2'>
       <span className='text-pink outline-text'>
         {title}
       </span>
       {large ? main : small }
-      
     </span>
   )
 }
