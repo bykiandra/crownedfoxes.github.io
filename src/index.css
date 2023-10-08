@@ -63,7 +63,7 @@ nav a {
 }
 
 .project-link {
-  @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover-transition hover:bg-blue hover:text-pink-light;
+  @apply text-sm font-semibold px-2 py-1 bg-pink-light text-blue hover-transition hover:bg-blue hover:text-pink-light focus:outline-none;
 }
 
 .link {
