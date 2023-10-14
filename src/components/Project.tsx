@@ -26,7 +26,7 @@ const Project = ({ name, description, image, code, website }: Props) => {
     <>
       <div>
         <div onClick={openModal} className='hover:cursor-pointer'>
-          <img src={image} width='350px' height='200px' alt={name} className='border-shadow' />
+          <img src={image} width='350px' height='200px' alt={name} className='border-shadow hover:border-pink' />
         </div>
       </div>
 
